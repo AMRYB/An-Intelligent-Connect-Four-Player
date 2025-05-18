@@ -1,0 +1,277 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap');
+@import url('https://fonts.cdnfonts.com/css/harry-potter');
+
+body {
+  font-family: 'Harry Potter', 'Poppins', sans-serif;
+  text-align: center;
+  color: white;
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  overflow: hidden;
+  background-image: url('../images/background.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+h1 {
+  margin-top: 30px;
+  font-weight: 700;
+}
+
+.custom-board-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  max-width: 600px;
+  margin: 0 auto;
+  flex-direction: column;
+}
+
+.custom-board {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 5px;
+  border-radius: 25px;
+  padding: 10px;
+  background-color: #0a1715;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 420px;
+  aspect-ratio: 7 / 6;
+}
+
+.cell {
+  width: 100%;
+  height: 100%;
+  background: #162f2c;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.player1 {
+  background: #692525;
+}
+
+.player2 {
+  background: #c59d23;
+}
+
+.players-info {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-bottom: 20px;
+}
+
+.player-card {
+  width: 140px;
+  padding: 10px;
+  border-radius: 15px;
+  color: white;
+  font-weight: bold;
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Poppins', sans-serif;
+}
+
+.player-card img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 5px solid;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.player1-card {
+  background-color: #162f2c;
+}
+
+.player1-card img {
+  border-color: #692525;
+}
+
+.player2-card {
+  background-color: #162f2c;
+}
+
+.player2-card img {
+  border-color: #c59d23;
+}
+
+.start-screen {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0,0,0,0.8);
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.start-box {
+  background: #0a1715;
+  padding: 40px;
+  border-radius: 20px;
+  text-align: center;
+  border: 2px solid #c59d23;
+  box-shadow: 0 0 20px #000;
+}
+
+.start-box h2 {
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+
+#start-btn {
+  padding: 10px 25px;
+  background-color: #692525;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+#next-btn {
+  padding: 10px 25px;
+  background-color: #c59d23;
+  color: black;
+  border: none;
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+#next-btn:hover {
+  background-color: #692525;
+  color: white;
+}
+
+#start-btn:hover {
+  background-color: #c59d23;
+  color: black;
+}
+
+.hidden {
+  display: none;
+}
+
+.players-info {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+
+.player-card {
+  width: 200px;
+  padding: 8px;
+  border-radius: 15px;
+  color: white;
+  font-weight: bold;
+  font-size: 14px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: start;
+  font-family: 'Poppins', sans-serif;
+  background-color: #162f2c;
+  gap: 10px;
+}
+
+.player-card p {
+  margin-top: 2px;
+}
+
+.player-card img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 3px solid;
+  object-fit: cover;
+}
+
+.player1-card img {
+  border-color: #692525;
+}
+
+.player2-card img {
+  border-color: #c59d23;
+}
+
+.selection-image {
+  width: 150px;
+  margin: 20px 0;
+}
+
+.start-box label {
+  display: block;
+  margin-top: 15px;
+  margin-bottom: 5px;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.styled-select {
+  width: 200px;
+  padding: 8px 12px;
+  font-size: 14px;
+  border-radius: 10px;
+  border: 2px solid #c59d23;
+  background-color: #162f2c;
+  color: white;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url('data:image/svg+xml;charset=US-ASCII,<svg fill="%23c59d23" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>');
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 16px 16px;
+}
+
+.styled-select:focus {
+  outline: none;
+  border-color: #f1c40f;
+  background-color: #1c3533;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+@media (max-width: 600px) {
+  .player-card {
+    width: 150px;
+    padding: 6px;
+    gap: 6px;
+  }
+
+  .player-card img {
+    width: 40px;
+    height: 40px;
+    border-width: 2px;
+  }
+
+  .player-card p {
+    font-size: 12px;
+  }
+}

@@ -1,0 +1,61 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
+@import url('https://fonts.cdnfonts.com/css/harry-potter');
+
+body {
+	text-align: center;
+	color: white;
+	height: 100vh;
+	margin: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	overflow: hidden;
+}
+
+.video-container {
+	position: relative;
+	width: 100%;
+	height: 100vh;
+	overflow: hidden;
+}
+
+video {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+#introContent {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	text-align: center;
+	opacity: 0;
+	pointer-events: none;
+	transition: opacity 2s ease;
+	z-index: 10;
+}
+
+#introContent.show {
+	opacity: 1;
+	pointer-events: all;
+}
+
+.harry-header {
+	font-family: 'Harry Potter', sans-serif;
+	font-size: 3rem;
+	margin-bottom: 20px;
+}
+
+.start-btn {
+	padding: 15px 30px;
+	font-size: 1.2rem;
+	font-weight: bold;
+	border: none;
+	border-radius: 10px;
+	background-color: #f0c040;
+	color: #1d1d1d;
+	cursor: pointer;
+}

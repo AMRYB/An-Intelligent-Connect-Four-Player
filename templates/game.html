@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <title>Connect Four</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="icon" href="{{ url_for('static', filename='images/icon.png') }}">
+      <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+   </head>
+   <body>
+      <div id="start-screen" class="start-screen">
+         <div class="start-box" id="step-1">
+            <h2>Choose AI Settings</h2>
+            <div class="form-group">
+               <label for="algorithm-select">Choose Algorithm:</label>
+               <select id="algorithm-select" class="styled-select">
+                  <option value="minimax" selected>Minimax</option>
+                  <option value="minimax2">Minimax v2</option>
+                  <option value="alpha_beta" selected>minimax with alphabeta</option>
+                  <option value="alpha_beta2">minimax2 with alpha beta</option>
+                  <option value="hurestic" selected>hurestic</option>
+                  <option value="hurestic2">hurestic2</option>
+               </select>
+            </div>
+            <div class="form-group">
+               <label for="difficulty">Choose Difficulty:</label>
+               <select id="difficulty" class="styled-select">
+                  <option value="EASY">Easy</option>
+                  <option value="MED" selected>Medium</option>
+                  <option value="HARD">Hard</option>
+               </select>
+            </div>
+            <button id="next-btn">Next</button>
+         </div>
+         <div class="start-box hidden" id="step-2">
+            <h2>Select Your Character and Opponent</h2>
+            <img src="{{ url_for('static', filename='images/1.svg') }}" alt="Game Art" class="selection-image">
+            <div class="form-group">
+               <label for="player-select">Your Character:</label>
+               <select id="player-select" class="styled-select">
+                  <option value="amr.jpg">Amr</option>
+                  <option value="amr.png">Dr.Amr</option>
+                  <option value="abdelrahman.png">TA.Abdelrahman</option>
+                  <option value="gx.jpg">GX</option>
+                  <option value="sama.jpg">Sama</option>
+                  <option value="mariem.jpg">Mariem</option>
+                  <option value="guest.jpg">Guest</option>
+               </select>
+            </div>
+            <div class="form-group">
+               <label for="ai-select">Opponent (AI):</label>
+               <select id="ai-select" class="styled-select">
+                  <option value="dumbledore.webp">Dumbledore</option>
+                  <option value="harry.jpg">Harry</option>
+                  <option value="voldemort.jpg">Voldemort</option>
+               </select>
+            </div>
+            <button id="start-btn">Start Game</button>
+         </div>
+      </div>
+      <div class="players-info hidden" id="players-info">
+         <div class="player-card player1-card">
+            <img id="player-img" src="{{ url_for('static', filename='images/amr.jpg') }}" alt="me">
+            <p id="player-name">Amr</p>
+         </div>
+         <div class="player-card player2-card">
+            <img id="ai-img" src="{{ url_for('static', filename='images/voldemort.jpg') }}" alt="AI">
+            <p id="ai-name">Voldemort</p>
+         </div>
+      </div>
+      <h1>Connect Four</h1>
+      <div class="custom-board-container">
+         <div id="board" class="custom-board"></div>
+      </div>
+      <audio id="bg-music" src="{{ url_for('static', filename='sounds/game.mp3') }}" autoplay loop hidden></audio>
+      <script src="{{ url_for('static', filename='js/game.js') }}"></script>
+   </body>
+</html>

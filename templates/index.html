@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+      <title>Connect 4 Harry Potter Edition</title>
+      <link rel="icon" href="{{ url_for('static', filename='/images/icon.png') }}">
+      <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
+      <link href="https://fonts.cdnfonts.com/css/harry-potter" rel="stylesheet">
+   </head>
+   <body>
+      <div class="video-container">
+         <video id="introVideo" autoplay muted>
+            <source src="{{ url_for('static', filename='video/intro.mp4') }}" type="video/mp4">
+         </video>
+         <audio id="introAudio">
+            <source src="{{ url_for('static', filename='sounds/intro.mp3') }}" type="audio/mpeg">
+         </audio>
+      </div>
+      <div id="introContent">
+         <h1 class="harry-header">Connect Four Harry Potter Edition</h1>
+         <button class="start-btn" onclick="startGame()">Start Game</button>
+      </div>
+      <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+   </body>
+</html>

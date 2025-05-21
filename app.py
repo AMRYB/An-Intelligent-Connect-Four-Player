@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, jsonify
+from flask import Flask, render_templates, request, jsonify
 import numpy as np
 import connect4
 
@@ -6,11 +6,11 @@ app = Flask(__name__)
 
 @app.route("/")
 def index():
-    return render_template("index.html")
+    return render_templates("index.html")
 
 @app.route("/game")
 def game():
-    return render_template("game.html")
+    return render_templates("game.html")
 
 @app.route("/move", methods=["POST"])
 def move():
